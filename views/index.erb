@@ -1,0 +1,19 @@
+<h1>Where have you visited lately?</h1>
+<ol>
+  <% @places_array.each() do |place| %>
+    <li>
+      <%= place.location() %>
+    </li>
+  <% end %>
+</ol>
+<form action="/input" method="post">
+  <div class="form-group">
+    <label for="locale">Please Enter The name of a recent destination</label>
+    <input id="locale" type="text" name="locale">
+    <button type="submit" class="btn">Add To List!</button>
+  </div>
+</form>
+
+<p>
+  <a href="/remove">Click link to remove places from your list</a>
+</p>
